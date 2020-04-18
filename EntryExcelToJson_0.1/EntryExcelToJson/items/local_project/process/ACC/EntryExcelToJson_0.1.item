@@ -1,0 +1,1766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" name="filepath" prompt="filepath?" promptNeeded="false" repositoryContextId="_eQAMoIFOEeqRNISNIgGZNw" type="id_String" value="&quot;C:\accfile\&quot;"/>
+    <contextParameter comment="" name="filename" prompt="filename?" promptNeeded="false" repositoryContextId="_eQAMoIFOEeqRNISNIgGZNw" type="id_String" value="&quot;acc_server_config.xlsx&quot;"/>
+    <contextParameter comment="" name="json_entry" prompt="json_entry?" promptNeeded="false" repositoryContextId="_eQAMoIFOEeqRNISNIgGZNw" type="id_String" value="&quot;entrylist&quot;"/>
+    <contextParameter comment="" name="json_event" prompt="json_event?" promptNeeded="false" repositoryContextId="_eQAMoIFOEeqRNISNIgGZNw" type="id_String" value="&quot;event&quot;"/>
+    <contextParameter comment="" name="json_eventRules" prompt="json_eventRules?" promptNeeded="false" repositoryContextId="_eQAMoIFOEeqRNISNIgGZNw" type="id_String" value="&quot;eventRules&quot;"/>
+    <contextParameter comment="" name="json_setting" prompt="json_setting?" promptNeeded="false" repositoryContextId="_eQAMoIFOEeqRNISNIgGZNw" type="id_String" value="&quot;settings&quot;"/>
+  </context>
+  <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" value="" show="false"/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" value="" show="false"/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" value="false" show="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" value="false" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" value="" show="false"/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:Q/dRLzk6FQGHv5yxp6SMnLLh1a+otAnK6e83ip9Y" show="false"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" value="Warning" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" value="false" show="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" value="false" show="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" value="&quot;F:/Talend/workspace/.metadata&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" value="&quot;stats_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" value="&quot;logs_file.txt&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" value="&quot;meter_file.txt&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="ISO-8859-15" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15" show="false"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" value="tJDBCOutput" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_12" show="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:EQLyyDtz22v9sMr2GC/YCTky7vCvoFvII6+kYFa3" show="false"/>
+    <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" value="true" show="false"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" value="" show="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" value="" show="false"/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" value="false" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" value="" show="false"/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" value="" show="false"/>
+    <routinesParameter id="_nY47oHb5EeqPr8trKiFnsA" name="DataOperation"/>
+    <routinesParameter id="_nZyTgHb5EeqPr8trKiFnsA" name="Mathematical"/>
+    <routinesParameter id="_nZ_H0Hb5EeqPr8trKiFnsA" name="Numeric"/>
+    <routinesParameter id="_naHqsHb5EeqPr8trKiFnsA" name="Relational"/>
+    <routinesParameter id="_naPmgHb5EeqPr8trKiFnsA" name="StringHandling"/>
+    <routinesParameter id="_naZXgHb5EeqPr8trKiFnsA" name="TalendDataGenerator"/>
+    <routinesParameter id="_naihcHb5EeqPr8trKiFnsA" name="TalendDate"/>
+    <routinesParameter id="_na5GwHb5EeqPr8trKiFnsA" name="TalendStringUtil"/>
+    <routinesParameter id="_nauusHb5EeqPr8trKiFnsA" name="TalendString"/>
+  </parameters>
+  <node componentName="tJSONDocOpen" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="32">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_1" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP" value="EMPTY_OBJECT"/>
+    <elementParameter field="CHECK" name="SIMPLIFIED_LINE_BREAKS" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PLAIN_TEXT_ONLY_AS_TEST" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT_PLAIN_TEXT" value="{}" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;/path/to/input_file.json&quot;" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSON_INPUT_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_INPUT" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP_JSON_SCHEMA" value="NO_JSON_SCHEMA"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_PLAIN_TEXT" value="" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_JAVA" value="" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocOpen_1"/>
+  </node>
+  <node componentName="tFixedFlowInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="TEXT" name="NB_ROWS" value="1"/>
+    <elementParameter field="RADIO" name="USE_SINGLEMODE" value="true"/>
+    <elementParameter field="TABLE" name="VALUES">
+      <elementValue elementRef="SCHEMA_COLUMN" value="forceEntryList"/>
+      <elementValue elementRef="VALUE" value="1"/>
+    </elementParameter>
+    <elementParameter field="RADIO" name="USE_INTABLE" value="false"/>
+    <elementParameter field="TABLE" name="INTABLE" show="false"/>
+    <elementParameter field="RADIO" name="USE_INLINECONTENT" value="false"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" value="&quot;\n&quot;" show="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;" show="false"/>
+    <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tFixedFlowInput_1">
+      <column comment="" key="false" length="-1" name="forceEntryList" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocOutput" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="288" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOutput_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOpen_1"/>
+    <elementParameter field="LABEL" name="LABEL_USE_PARENT_AS_CURRENT_OBJECT" value="This feature only works if the referenced parent component is a tJSONDocOutput." show="false"/>
+    <elementParameter field="CHECK" name="AUTOMATIC_PARENT_CHILD_RELATIONS" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PARENT_KEY_COLUMN" value="forceEntryList" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_PARENT_NOT_EXISTS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_PARENT_AS_CURRENT_OBJECT" value="false"/>
+    <elementParameter field="TEXT" name="PARENT_JSON_PATH" value="&quot;$&quot;"/>
+    <elementParameter field="LABEL" name="LABEL_PARENT_JSON_PATH" value="You can use here json path expression but without search function. Example: &quot;bo.person[0].address[2][3].street[0]&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_STRUCTURE" value="SINGLE_OBJECT"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_OBJECTS" value="The field configuration below describes the json attributes of the objects to be added to the parent array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_SINGLE_OBJECT" value="The field configuration below describes the json attributes of the object to be set to the parent."/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_VALUES" value="The values from the schema (should only contain one column) will be added as simple values or as json objects to the parent array. Omit empty attributes means in this case, do not add null to the array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_ARRAYS" value="The values from the schema columns will be added row by row as array to the parent array." show="false"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG">
+      <elementValue elementRef="SCHEMA_COLUMN" value="forceEntryList"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="KEYS_AS_SQL_IN_CLAUSE_REPLACEMENT" value="&quot;='0'&quot;"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocOutput_1">
+      <column comment="" key="false" length="-1" name="forceEntryList" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_1" show="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.filepath + context.filename"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:FiAhFHvGYe+/Va0uZ/geaAvl4kYEJ9KhvgfDMCqT"/>
+    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
+    <elementParameter field="TABLE" name="SHEETLIST">
+      <elementValue elementRef="SHEETNAME" value="context.json_entry"/>
+      <elementValue elementRef="USE_REGEX" value=""/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
+    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_3s7v4IDTEeqJr_gbZM7deg - metadata" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_3s7v4IDTEeqJr_gbZM7deg - metadata" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="','" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="'.'" show="false"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="firstName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shortName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="driverCategory"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="playerID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="raceNumber"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="forcedCarModel"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="overrideDriverInfo"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="defaultGridPosition"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ballastKg"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="restrictor"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="overrideCarModelForCustomCar"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isServerAdmin"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
+    <elementParameter field="TABLE" name="DATESELECT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="firstName"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastName"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shortName"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="driverCategory"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="playerID"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="raceNumber"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="forcedCarModel"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="overrideDriverInfo"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="defaultGridPosition"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ballastKg"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="restrictor"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="overrideCarModelForCustomCar"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isServerAdmin"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
+    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputExcel_1">
+      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverCategory" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="playerID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="raceNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="forcedCarModel" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideDriverInfo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="defaultGridPosition" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ballastKg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="restrictor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideCarModelForCustomCar" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isServerAdmin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverCategory" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="playerID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="raceNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="forcedCarModel" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideDriverInfo" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="defaultGridPosition" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ballastKg" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="restrictor" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideCarModelForCustomCar" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isServerAdmin" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="480" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_1" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_mQo4IIDTEeqJr_gbZM7deg-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="out1">
+      <column comment="" key="false" length="-1" name="raceNumber" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="forcedCarModel" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideDriverInfo" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="defaultGridPosition" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ballastKg" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="restrictor" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideCarModelForCustomCar" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isServerAdmin" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="metadata" name="out2">
+      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverCategory" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="playerID" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="out1">
+        <mapperTableEntries name="raceNumber" expression="row3.raceNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="forcedCarModel" expression="row3.forcedCarModel" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="overrideDriverInfo" expression="row3.overrideDriverInfo" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="defaultGridPosition" expression="row3.defaultGridPosition" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ballastKg" expression="row3.ballastKg" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="restrictor" expression="row3.restrictor" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="overrideCarModelForCustomCar" expression="row3.overrideCarModelForCustomCar" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isServerAdmin" expression="row3.isServerAdmin" type="id_Integer" nullable="true"/>
+      </outputTables>
+      <outputTables sizeState="INTERMEDIATE" name="out2">
+        <mapperTableEntries name="firstName" expression="row3.firstName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastName" expression="row3.lastName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="shortName" expression="row3.shortName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="driverCategory" expression="row3.driverCategory" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="playerID" expression="row3.playerID" type="id_String" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row3" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="firstName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="lastName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="shortName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="driverCategory" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="playerID" type="id_String" nullable="true"/>
+        <mapperTableEntries name="raceNumber" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="forcedCarModel" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="overrideDriverInfo" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="defaultGridPosition" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ballastKg" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="restrictor" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="overrideCarModelForCustomCar" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isServerAdmin" type="id_Integer" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tJSONDocOutput" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="672" posY="288">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOutput_2" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOutput_1"/>
+    <elementParameter field="LABEL" name="LABEL_USE_PARENT_AS_CURRENT_OBJECT" value="This feature only works if the referenced parent component is a tJSONDocOutput." show="false"/>
+    <elementParameter field="CHECK" name="AUTOMATIC_PARENT_CHILD_RELATIONS" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PARENT_KEY_COLUMN" value="raceNumber" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_PARENT_NOT_EXISTS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_PARENT_AS_CURRENT_OBJECT" value="false"/>
+    <elementParameter field="TEXT" name="PARENT_JSON_PATH" value="&quot;$.entries&quot;"/>
+    <elementParameter field="LABEL" name="LABEL_PARENT_JSON_PATH" value="You can use here json path expression but without search function. Example: &quot;bo.person[0].address[2][3].street[0]&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_STRUCTURE" value="ARRAY_OF_OBJECTS"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_OBJECTS" value="The field configuration below describes the json attributes of the objects to be added to the parent array."/>
+    <elementParameter field="LABEL" name="LABEL_SINGLE_OBJECT" value="The field configuration below describes the json attributes of the object to be set to the parent." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_VALUES" value="The values from the schema (should only contain one column) will be added as simple values or as json objects to the parent array. Omit empty attributes means in this case, do not add null to the array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_ARRAYS" value="The values from the schema columns will be added row by row as array to the parent array." show="false"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG">
+      <elementValue elementRef="SCHEMA_COLUMN" value="raceNumber"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="forcedCarModel"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="overrideDriverInfo"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="defaultGridPosition"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ballastKg"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="restrictor"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="overrideCarModelForCustomCar"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isServerAdmin"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="KEYS_AS_SQL_IN_CLAUSE_REPLACEMENT" value="&quot;='0'&quot;"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tJSONDocOutput_2">
+      <column comment="" key="false" length="-1" name="raceNumber" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="forcedCarModel" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideDriverInfo" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="defaultGridPosition" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ballastKg" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="restrictor" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="overrideCarModelForCustomCar" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isServerAdmin" nullable="true" pattern="" precision="0" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocOutput" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="672" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOutput_3" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOutput_2"/>
+    <elementParameter field="LABEL" name="LABEL_USE_PARENT_AS_CURRENT_OBJECT" value="This feature only works if the referenced parent component is a tJSONDocOutput." show="false"/>
+    <elementParameter field="CHECK" name="AUTOMATIC_PARENT_CHILD_RELATIONS" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PARENT_KEY_COLUMN" value="firstName" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_PARENT_NOT_EXISTS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_PARENT_AS_CURRENT_OBJECT" value="false"/>
+    <elementParameter field="TEXT" name="PARENT_JSON_PATH" value="&quot;$.drivers&quot;"/>
+    <elementParameter field="LABEL" name="LABEL_PARENT_JSON_PATH" value="You can use here json path expression but without search function. Example: &quot;bo.person[0].address[2][3].street[0]&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_STRUCTURE" value="ARRAY_OF_OBJECTS"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_OBJECTS" value="The field configuration below describes the json attributes of the objects to be added to the parent array."/>
+    <elementParameter field="LABEL" name="LABEL_SINGLE_OBJECT" value="The field configuration below describes the json attributes of the object to be set to the parent." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_VALUES" value="The values from the schema (should only contain one column) will be added as simple values or as json objects to the parent array. Omit empty attributes means in this case, do not add null to the array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_ARRAYS" value="The values from the schema columns will be added row by row as array to the parent array." show="false"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG">
+      <elementValue elementRef="SCHEMA_COLUMN" value="firstName"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="lastName"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shortName"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="driverCategory"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="playerID"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="KEYS_AS_SQL_IN_CLAUSE_REPLACEMENT" value="&quot;='0'&quot;"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tJSONDocOutput_3">
+      <column comment="" key="false" length="-1" name="firstName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="lastName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverCategory" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="playerID" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocSave" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="512">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_1" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOutput_1"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_FILE" value="true"/>
+    <elementParameter field="FILE" name="OUTPUT_FILE_PATH" value="context.filepath + context.json_entry + &quot;.json&quot;"/>
+    <elementParameter field="COLUMN_LIST" name="JSON_OUTPUT_COLUMN" value="entry"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_NODE" value="false"/>
+    <elementParameter field="CHECK" name="PRETTY_PRINT" value="true"/>
+    <elementParameter field="CHECK" name="IGNORE_EMPTY" value="false"/>
+    <elementParameter field="CHECK" name="STD_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT_ARRAY" value="false"/>
+    <elementParameter field="TEXT" name="REMOVE_ROOT_ARRAY_CONDITION" value="true" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_REMOVAL_NOT_POSSIBLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocSave_1">
+      <column comment="" key="false" length="-1" name="entry" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="force" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_2" show="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.filepath + context.filename"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:GZLCknoQBb87xnQnLCJrczQRQVoGuLqczNglP7/0"/>
+    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
+    <elementParameter field="TABLE" name="SHEETLIST">
+      <elementValue elementRef="SHEETNAME" value="context.json_event"/>
+      <elementValue elementRef="USE_REGEX" value=""/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="HEADER" value="1"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value=""/>
+    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_COLUMN" value="1"/>
+    <elementParameter field="TEXT" name="LAST_COLUMN" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_bRpdkYEsEeqRNISNIgGZNw - metadata" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_3s7v4IDTEeqJr_gbZM7deg - metadata" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="','" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="'.'" show="false"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="track"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="preRaceWaitingTimeSeconds"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionOverTimeSeconds"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ambientTemp"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cloudLevel"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="rain"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="weatherRandomness"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postQualySeconds"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postRaceSeconds"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionType"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="hourOfDay"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dayOfWeekend"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="timeMultiplier"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionDurationMinutes"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="configVersion"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
+    <elementParameter field="TABLE" name="DATESELECT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="track"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="preRaceWaitingTimeSeconds"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionOverTimeSeconds"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ambientTemp"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cloudLevel"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="rain"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="weatherRandomness"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postQualySeconds"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postRaceSeconds"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionType"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="hourOfDay"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dayOfWeekend"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="timeMultiplier"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionDurationMinutes"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="configVersion"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
+    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputExcel_2">
+      <column comment="" key="false" length="-1" name="track" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="preRaceWaitingTimeSeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionOverTimeSeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ambientTemp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cloudLevel" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="rain" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="weatherRandomness" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postQualySeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postRaceSeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hourOfDay" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dayOfWeekend" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="timeMultiplier" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionDurationMinutes" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="track" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="preRaceWaitingTimeSeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionOverTimeSeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ambientTemp" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cloudLevel" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="rain" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="weatherRandomness" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postQualySeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postRaceSeconds" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="hourOfDay" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dayOfWeekend" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="timeMultiplier" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionDurationMinutes" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="288" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_2" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_mQo4IIDTEeqJr_gbZM7deg-tMap_2-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="main">
+      <column comment="" key="false" length="-1" name="track" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="preRaceWaitingTimeSeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionOverTimeSeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ambientTemp" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cloudLevel" nullable="true" pattern="" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="rain" nullable="true" pattern="" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="weatherRandomness" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postQualySeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postRaceSeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="FLOW" label="metadata" name="sessions">
+      <column comment="" key="false" length="-1" name="hourOfDay" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dayOfWeekend" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="timeMultiplier" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionType" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionDurationMinutes" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="main">
+        <mapperTableEntries name="track" expression="row2.track" type="id_String" nullable="true"/>
+        <mapperTableEntries name="preRaceWaitingTimeSeconds" expression="row2.preRaceWaitingTimeSeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="sessionOverTimeSeconds" expression="row2.sessionOverTimeSeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ambientTemp" expression="row2.ambientTemp" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="cloudLevel" expression="row2.cloudLevel" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="rain" expression="row2.rain" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="weatherRandomness" expression="row2.weatherRandomness" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="postQualySeconds" expression="row2.postQualySeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="postRaceSeconds" expression="row2.postRaceSeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="configVersion" expression="row2.configVersion" type="id_Integer" nullable="true"/>
+      </outputTables>
+      <outputTables sizeState="INTERMEDIATE" name="sessions">
+        <mapperTableEntries name="hourOfDay" expression="row2.hourOfDay" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dayOfWeekend" expression="row2.dayOfWeekend" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="timeMultiplier" expression="row2.timeMultiplier" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="sessionType" expression="row2.sessionType" type="id_String" nullable="true"/>
+        <mapperTableEntries name="sessionDurationMinutes" expression="row2.sessionDurationMinutes" type="id_Integer" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="track" type="id_String" nullable="true"/>
+        <mapperTableEntries name="preRaceWaitingTimeSeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="sessionOverTimeSeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="ambientTemp" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="cloudLevel" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="rain" type="id_Double" nullable="true"/>
+        <mapperTableEntries name="weatherRandomness" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="postQualySeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="postRaceSeconds" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="sessionType" type="id_String" nullable="true"/>
+        <mapperTableEntries name="hourOfDay" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dayOfWeekend" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="timeMultiplier" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="sessionDurationMinutes" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="configVersion" type="id_Integer" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tJSONDocOutput" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="480" posY="864">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOutput_5" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOutput_4"/>
+    <elementParameter field="LABEL" name="LABEL_USE_PARENT_AS_CURRENT_OBJECT" value="This feature only works if the referenced parent component is a tJSONDocOutput." show="false"/>
+    <elementParameter field="CHECK" name="AUTOMATIC_PARENT_CHILD_RELATIONS" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PARENT_KEY_COLUMN" value="hourOfDay" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_PARENT_NOT_EXISTS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_PARENT_AS_CURRENT_OBJECT" value="false"/>
+    <elementParameter field="TEXT" name="PARENT_JSON_PATH" value="&quot;$.sessions&quot;"/>
+    <elementParameter field="LABEL" name="LABEL_PARENT_JSON_PATH" value="You can use here json path expression but without search function. Example: &quot;bo.person[0].address[2][3].street[0]&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_STRUCTURE" value="ARRAY_OF_OBJECTS"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_OBJECTS" value="The field configuration below describes the json attributes of the objects to be added to the parent array."/>
+    <elementParameter field="LABEL" name="LABEL_SINGLE_OBJECT" value="The field configuration below describes the json attributes of the object to be set to the parent." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_VALUES" value="The values from the schema (should only contain one column) will be added as simple values or as json objects to the parent array. Omit empty attributes means in this case, do not add null to the array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_ARRAYS" value="The values from the schema columns will be added row by row as array to the parent array." show="false"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG">
+      <elementValue elementRef="SCHEMA_COLUMN" value="hourOfDay"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dayOfWeekend"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="timeMultiplier"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionType"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionDurationMinutes"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_CwwegIEoEeqRNISNIgGZNw - metadata" show="false"/>
+    <elementParameter field="TEXT" name="KEYS_AS_SQL_IN_CLAUSE_REPLACEMENT" value="&quot;='0'&quot;"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tJSONDocOutput_5">
+      <column comment="" key="false" length="-1" name="hourOfDay" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dayOfWeekend" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="timeMultiplier" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionType" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionDurationMinutes" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocOutput" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="480" posY="768">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOutput_4" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOpen_2"/>
+    <elementParameter field="LABEL" name="LABEL_USE_PARENT_AS_CURRENT_OBJECT" value="This feature only works if the referenced parent component is a tJSONDocOutput." show="false"/>
+    <elementParameter field="CHECK" name="AUTOMATIC_PARENT_CHILD_RELATIONS" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PARENT_KEY_COLUMN" value="track" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_PARENT_NOT_EXISTS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_PARENT_AS_CURRENT_OBJECT" value="false"/>
+    <elementParameter field="TEXT" name="PARENT_JSON_PATH" value="&quot;$&quot;"/>
+    <elementParameter field="LABEL" name="LABEL_PARENT_JSON_PATH" value="You can use here json path expression but without search function. Example: &quot;bo.person[0].address[2][3].street[0]&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_STRUCTURE" value="SINGLE_OBJECT"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_OBJECTS" value="The field configuration below describes the json attributes of the objects to be added to the parent array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_SINGLE_OBJECT" value="The field configuration below describes the json attributes of the object to be set to the parent."/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_VALUES" value="The values from the schema (should only contain one column) will be added as simple values or as json objects to the parent array. Omit empty attributes means in this case, do not add null to the array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_ARRAYS" value="The values from the schema columns will be added row by row as array to the parent array." show="false"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG">
+      <elementValue elementRef="SCHEMA_COLUMN" value="track"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="preRaceWaitingTimeSeconds"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="sessionOverTimeSeconds"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="ambientTemp"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cloudLevel"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="rain"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="weatherRandomness"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postQualySeconds"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postRaceSeconds"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="configVersion"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_4cs0wIEnEeqRNISNIgGZNw - metadata" show="false"/>
+    <elementParameter field="TEXT" name="KEYS_AS_SQL_IN_CLAUSE_REPLACEMENT" value="&quot;='0'&quot;"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tJSONDocOutput_4">
+      <column comment="" key="false" length="-1" name="track" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="preRaceWaitingTimeSeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="sessionOverTimeSeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="ambientTemp" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="cloudLevel" nullable="true" pattern="" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="rain" nullable="true" pattern="" precision="-1" type="id_Double" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="weatherRandomness" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postQualySeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postRaceSeconds" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocOpen" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="640">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_2" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP" value="EMPTY_OBJECT"/>
+    <elementParameter field="CHECK" name="SIMPLIFIED_LINE_BREAKS" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PLAIN_TEXT_ONLY_AS_TEST" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT_PLAIN_TEXT" value="{}" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;/path/to/input_file.json&quot;" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSON_INPUT_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_INPUT" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP_JSON_SCHEMA" value="NO_JSON_SCHEMA"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_PLAIN_TEXT" value="" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_JAVA" value="" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocOpen_2"/>
+  </node>
+  <node componentName="tJSONDocSave" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="992">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_2" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOutput_4"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_FILE" value="true"/>
+    <elementParameter field="FILE" name="OUTPUT_FILE_PATH" value="context.filepath + context.json_event + &quot;.json&quot;"/>
+    <elementParameter field="COLUMN_LIST" name="JSON_OUTPUT_COLUMN" value="entry"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_NODE" value="false"/>
+    <elementParameter field="CHECK" name="PRETTY_PRINT" value="true"/>
+    <elementParameter field="CHECK" name="IGNORE_EMPTY" value="false"/>
+    <elementParameter field="CHECK" name="STD_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT_ARRAY" value="false"/>
+    <elementParameter field="TEXT" name="REMOVE_ROOT_ARRAY_CONDITION" value="true" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_REMOVAL_NOT_POSSIBLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocSave_2">
+      <column comment="" key="false" length="-1" name="entry" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="force" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocOpen" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1120">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_3" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP" value="EMPTY_OBJECT"/>
+    <elementParameter field="CHECK" name="SIMPLIFIED_LINE_BREAKS" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PLAIN_TEXT_ONLY_AS_TEST" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT_PLAIN_TEXT" value="{}" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;/path/to/input_file.json&quot;" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSON_INPUT_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_INPUT" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP_JSON_SCHEMA" value="NO_JSON_SCHEMA"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_PLAIN_TEXT" value="" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_JAVA" value="" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocOpen_3"/>
+  </node>
+  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_3" show="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.filepath + context.filename"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:2Ihfz+dGn6tgUECHWl9ScIGbeYMrkHojZJzy2btX"/>
+    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
+    <elementParameter field="TABLE" name="SHEETLIST">
+      <elementValue elementRef="SHEETNAME" value="&quot;eventRules&quot;"/>
+      <elementValue elementRef="USE_REGEX" value=""/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="HEADER" value="0"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value="12"/>
+    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_COLUMN" value="2"/>
+    <elementParameter field="TEXT" name="LAST_COLUMN" value="2"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_3s7v4IDTEeqJr_gbZM7deg - metadata" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="','" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="'.'" show="false"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="data"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
+    <elementParameter field="TABLE" name="DATESELECT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="data"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
+    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputExcel_3">
+      <column comment="" key="false" length="-1" name="data" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="data" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDenormalize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDenormalize_1" show="false"/>
+    <elementParameter field="TABLE" name="DENORMALIZE_COLUMNS">
+      <elementValue elementRef="INPUT_COLUMN" value="data"/>
+      <elementValue elementRef="DELIMITER" value="&quot;;&quot;"/>
+      <elementValue elementRef="MERGE" value="false"/>
+    </elementParameter>
+    <elementParameter field="LABEL" name="NOTE" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tDenormalize_1">
+      <column comment="" key="false" length="-1" name="data" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractDelimitedFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractDelimitedFields_1" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="data"/>
+    <elementParameter field="CHECK" name="IGNORE_SOURCE_NULL" value="true"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_FayswYExEeqRNISNIgGZNw - metadata" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="TRIM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tExtractDelimitedFields_1">
+      <column comment="" key="false" length="-1" name="qualifyStandingType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pitWindowLengthSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverStintTimeSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isPitstopAllowedInPractice" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRefuellingAllowedInRace" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tyreSetCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxDriversCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxTotalDrivingTime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mandatoryPitstopCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopRefuellingRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopTyreChangeRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopSwapDriverRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="qualifyStandingType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pitWindowLengthSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverStintTimeSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isPitstopAllowedInPractice" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRefuellingAllowedInRace" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tyreSetCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxDriversCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxTotalDrivingTime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mandatoryPitstopCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopRefuellingRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopTyreChangeRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopSwapDriverRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_3" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_mQo4IIDTEeqJr_gbZM7deg-tMap_3-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="eventRules">
+      <column comment="" key="false" length="-1" name="qualifyStandingType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pitWindowLengthSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverStintTimeSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isPitstopAllowedInPractice" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRefuellingAllowedInRace" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tyreSetCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxDriversCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxTotalDrivingTime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mandatoryPitstopCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopRefuellingRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopTyreChangeRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopSwapDriverRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="eventRules">
+        <mapperTableEntries name="qualifyStandingType" expression="row6.qualifyStandingType" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="pitWindowLengthSec" expression="row6.pitWindowLengthSec" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="driverStintTimeSec" expression="row6.driverStintTimeSec" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isPitstopAllowedInPractice" expression="row6.isPitstopAllowedInPractice" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="isRefuellingAllowedInRace" expression="row6.isRefuellingAllowedInRace" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="tyreSetCount" expression="row6.tyreSetCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="maxDriversCount" expression="row6.maxDriversCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="maxTotalDrivingTime" expression="row6.maxTotalDrivingTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="mandatoryPitstopCount" expression="row6.mandatoryPitstopCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isMandatoryPitstopRefuellingRequired" expression="row6.isMandatoryPitstopRefuellingRequired" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="isMandatoryPitstopTyreChangeRequired" expression="row6.isMandatoryPitstopTyreChangeRequired" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="isMandatoryPitstopSwapDriverRequired" expression="row6.isMandatoryPitstopSwapDriverRequired" type="id_Boolean" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row6" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="qualifyStandingType" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="pitWindowLengthSec" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="driverStintTimeSec" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isPitstopAllowedInPractice" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="isRefuellingAllowedInRace" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="tyreSetCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="maxDriversCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="maxTotalDrivingTime" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="mandatoryPitstopCount" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isMandatoryPitstopRefuellingRequired" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="isMandatoryPitstopTyreChangeRequired" type="id_Boolean" nullable="true"/>
+        <mapperTableEntries name="isMandatoryPitstopSwapDriverRequired" type="id_Boolean" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tJSONDocOutput" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1248">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOutput_6" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOpen_3"/>
+    <elementParameter field="LABEL" name="LABEL_USE_PARENT_AS_CURRENT_OBJECT" value="This feature only works if the referenced parent component is a tJSONDocOutput." show="false"/>
+    <elementParameter field="CHECK" name="AUTOMATIC_PARENT_CHILD_RELATIONS" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PARENT_KEY_COLUMN" value="qualifyStandingType" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_PARENT_NOT_EXISTS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_PARENT_AS_CURRENT_OBJECT" value="false"/>
+    <elementParameter field="TEXT" name="PARENT_JSON_PATH" value="&quot;$&quot;"/>
+    <elementParameter field="LABEL" name="LABEL_PARENT_JSON_PATH" value="You can use here json path expression but without search function. Example: &quot;bo.person[0].address[2][3].street[0]&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_STRUCTURE" value="SINGLE_OBJECT"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_OBJECTS" value="The field configuration below describes the json attributes of the objects to be added to the parent array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_SINGLE_OBJECT" value="The field configuration below describes the json attributes of the object to be set to the parent."/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_VALUES" value="The values from the schema (should only contain one column) will be added as simple values or as json objects to the parent array. Omit empty attributes means in this case, do not add null to the array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_ARRAYS" value="The values from the schema columns will be added row by row as array to the parent array." show="false"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG">
+      <elementValue elementRef="SCHEMA_COLUMN" value="qualifyStandingType"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="pitWindowLengthSec"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="driverStintTimeSec"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isPitstopAllowedInPractice"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isRefuellingAllowedInRace"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="tyreSetCount"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="maxDriversCount"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="maxTotalDrivingTime"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="mandatoryPitstopCount"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isMandatoryPitstopRefuellingRequired"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isMandatoryPitstopTyreChangeRequired"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isMandatoryPitstopSwapDriverRequired"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_FayswYExEeqRNISNIgGZNw - metadata" show="false"/>
+    <elementParameter field="TEXT" name="KEYS_AS_SQL_IN_CLAUSE_REPLACEMENT" value="&quot;='0'&quot;"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tJSONDocOutput_6">
+      <column comment="" key="false" length="-1" name="qualifyStandingType" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="pitWindowLengthSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="driverStintTimeSec" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isPitstopAllowedInPractice" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRefuellingAllowedInRace" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="tyreSetCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxDriversCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxTotalDrivingTime" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="mandatoryPitstopCount" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopRefuellingRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopTyreChangeRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isMandatoryPitstopSwapDriverRequired" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" type="id_Boolean" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocSave" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1376">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_3" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOutput_6"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_FILE" value="true"/>
+    <elementParameter field="FILE" name="OUTPUT_FILE_PATH" value="context.filepath + context.json_eventRules + &quot;.json&quot;"/>
+    <elementParameter field="COLUMN_LIST" name="JSON_OUTPUT_COLUMN" value="entry"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_NODE" value="false"/>
+    <elementParameter field="CHECK" name="PRETTY_PRINT" value="true"/>
+    <elementParameter field="CHECK" name="IGNORE_EMPTY" value="false"/>
+    <elementParameter field="CHECK" name="STD_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT_ARRAY" value="false"/>
+    <elementParameter field="TEXT" name="REMOVE_ROOT_ARRAY_CONDITION" value="true" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_REMOVAL_NOT_POSSIBLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocSave_3">
+      <column comment="" key="false" length="-1" name="entry" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="force" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocOpen" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1504">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_4" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP" value="EMPTY_OBJECT"/>
+    <elementParameter field="CHECK" name="SIMPLIFIED_LINE_BREAKS" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT" value="" show="false"/>
+    <elementParameter field="CHECK" name="USE_PLAIN_TEXT_ONLY_AS_TEST" value="true" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_CONTENT_PLAIN_TEXT" value="{}" show="false"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;/path/to/input_file.json&quot;" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="JSON_INPUT_COLUMN" value="" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_INPUT" value="false" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="SETUP_JSON_SCHEMA" value="NO_JSON_SCHEMA"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_PLAIN_TEXT" value="" show="false"/>
+    <elementParameter field="MEMO_JAVA" name="JSON_SCHEMA_CONTENT_JAVA" value="" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocOpen_4"/>
+  </node>
+  <node componentName="tFileInputExcel" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1632">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_4" show="false"/>
+    <elementParameter field="CHECK" name="VERSION_2007" value="true"/>
+    <elementParameter field="FILE" name="FILENAME" value="context.filepath + context.filename"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:A7C8pr1RROUhom7Ns+DXSLtIFY8BtUtKUY4x4WHE"/>
+    <elementParameter field="CHECK" name="ALL_SHEETS" value="false"/>
+    <elementParameter field="TABLE" name="SHEETLIST">
+      <elementValue elementRef="SHEETNAME" value="context.json_setting"/>
+      <elementValue elementRef="USE_REGEX" value=""/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="HEADER" value="0"/>
+    <elementParameter field="TEXT" name="FOOTER" value="0"/>
+    <elementParameter field="TEXT" name="LIMIT" value="16"/>
+    <elementParameter field="CHECK" name="AFFECT_EACH_SHEET" value="false"/>
+    <elementParameter field="TEXT" name="FIRST_COLUMN" value="2"/>
+    <elementParameter field="TEXT" name="LAST_COLUMN" value="2"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" value="_3s7v4IDTEeqJr_gbZM7deg - metadata" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="','" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="'.'" show="false"/>
+    <elementParameter field="CHECK" name="TRIMALL" value="false"/>
+    <elementParameter field="TABLE" name="TRIMSELECT">
+      <elementValue elementRef="SCHEMA_COLUMN" value="data"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="CONVERTDATETOSTRING" value="false"/>
+    <elementParameter field="TABLE" name="DATESELECT" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="data"/>
+      <elementValue elementRef="CONVERTDATE" value="false"/>
+      <elementValue elementRef="PATTERN" value="&quot;MM-dd-yyyy&quot;"/>
+    </elementParameter>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
+    <elementParameter field="CHECK" name="READ_REAL_VALUE" value="false" show="false"/>
+    <elementParameter field="CHECK" name="STOPREAD_ON_EMPTYROW" value="false"/>
+    <elementParameter field="CHECK" name="NOVALIDATE_ON_CELL" value="false" show="false"/>
+    <elementParameter field="CHECK" name="SUPPRESS_WARN" value="false" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="GENERATION_MODE" value="USER_MODE"/>
+    <elementParameter field="CHECK" name="INCLUDE_PHONETICRUNS" value="true" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tFileInputExcel_4">
+      <column comment="" key="false" length="-1" name="data" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="data" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDenormalize" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="288" posY="1632">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDenormalize_2" show="false"/>
+    <elementParameter field="TABLE" name="DENORMALIZE_COLUMNS">
+      <elementValue elementRef="INPUT_COLUMN" value="data"/>
+      <elementValue elementRef="DELIMITER" value="&quot;;&quot;"/>
+      <elementValue elementRef="MERGE" value="false"/>
+    </elementParameter>
+    <elementParameter field="LABEL" name="NOTE" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tDenormalize_2">
+      <column comment="" key="false" length="-1" name="data" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tExtractDelimitedFields" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="1632">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tExtractDelimitedFields_2" show="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="FIELD" value="data"/>
+    <elementParameter field="CHECK" name="IGNORE_SOURCE_NULL" value="true"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_ADykIIE3EeqRNISNIgGZNw - metadata" show="false"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" value="&quot;,&quot;" show="false"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" value="&quot;.&quot;" show="false"/>
+    <elementParameter field="CHECK" name="TRIM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_FIELDS_NUM" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_DATE" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" value="100" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tExtractDelimitedFields_2">
+      <column comment="" key="false" length="-1" name="serverName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trackMedalsRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="safetyRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="racecraftRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRaceLocked" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="password" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxCarSlots" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="spectatorPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="randomizeTrackWhenEmpty" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortFormationLap" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpLeaderboards" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpEntryList" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="allowAutoDQ" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="formationLapType" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" label="metadata" name="REJECT">
+      <column comment="" key="false" length="-1" name="serverName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trackMedalsRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="safetyRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="racecraftRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRaceLocked" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="password" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxCarSlots" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="spectatorPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="randomizeTrackWhenEmpty" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortFormationLap" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpLeaderboards" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpEntryList" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="allowAutoDQ" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="formationLapType" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="672" posY="1632">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tMap_4" show="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_mQo4IIDTEeqJr_gbZM7deg-tMap_4-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true" show="false"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" value="0" show="false"/>
+    <elementParameter field="TEXT" name="JACCARD" value="0" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="settings">
+      <column comment="" key="false" length="-1" name="serverName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trackMedalsRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="safetyRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="racecraftRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRaceLocked" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="password" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxCarSlots" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="spectatorPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="randomizeTrackWhenEmpty" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortFormationLap" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpLeaderboards" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpEntryList" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="allowAutoDQ" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="formationLapType" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties/>
+      <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
+      <outputTables sizeState="INTERMEDIATE" name="settings">
+        <mapperTableEntries name="serverName" expression="row9.serverName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminPassword" expression="row9.adminPassword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="trackMedalsRequirement" expression="row9.trackMedalsRequirement" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="safetyRatingRequirement" expression="row9.safetyRatingRequirement" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="racecraftRatingRequirement" expression="row9.racecraftRatingRequirement" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isRaceLocked" expression="row9.isRaceLocked" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="password" expression="row9.password" type="id_String" nullable="true"/>
+        <mapperTableEntries name="maxCarSlots" expression="row9.maxCarSlots" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="spectatorPassword" expression="row9.spectatorPassword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="randomizeTrackWhenEmpty" expression="row9.randomizeTrackWhenEmpty" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="shortFormationLap" expression="row9.shortFormationLap" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dumpLeaderboards" expression="row9.dumpLeaderboards" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dumpEntryList" expression="row9.dumpEntryList" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="allowAutoDQ" expression="row9.allowAutoDQ" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="formationLapType" expression="row9.formationLapType" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="configVersion" expression="row9.configVersion" type="id_Integer" nullable="true"/>
+      </outputTables>
+      <inputTables sizeState="INTERMEDIATE" name="row9" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
+        <mapperTableEntries name="serverName" type="id_String" nullable="true"/>
+        <mapperTableEntries name="adminPassword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="trackMedalsRequirement" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="safetyRatingRequirement" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="racecraftRatingRequirement" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="isRaceLocked" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="password" type="id_String" nullable="true"/>
+        <mapperTableEntries name="maxCarSlots" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="spectatorPassword" type="id_String" nullable="true"/>
+        <mapperTableEntries name="randomizeTrackWhenEmpty" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="shortFormationLap" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dumpLeaderboards" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="dumpEntryList" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="allowAutoDQ" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="formationLapType" type="id_Integer" nullable="true"/>
+        <mapperTableEntries name="configVersion" type="id_Integer" nullable="true"/>
+      </inputTables>
+    </nodeData>
+  </node>
+  <node componentName="tJSONDocOutput" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="864" posY="1632">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOutput_7" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOpen_4"/>
+    <elementParameter field="LABEL" name="LABEL_USE_PARENT_AS_CURRENT_OBJECT" value="This feature only works if the referenced parent component is a tJSONDocOutput." show="false"/>
+    <elementParameter field="CHECK" name="AUTOMATIC_PARENT_CHILD_RELATIONS" value="false"/>
+    <elementParameter field="PREV_COLUMN_LIST" name="PARENT_KEY_COLUMN" value="serverName" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_PARENT_NOT_EXISTS" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_PARENT_AS_CURRENT_OBJECT" value="false"/>
+    <elementParameter field="TEXT" name="PARENT_JSON_PATH" value="&quot;$&quot;"/>
+    <elementParameter field="LABEL" name="LABEL_PARENT_JSON_PATH" value="You can use here json path expression but without search function. Example: &quot;bo.person[0].address[2][3].street[0]&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_STRUCTURE" value="SINGLE_OBJECT"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_OBJECTS" value="The field configuration below describes the json attributes of the objects to be added to the parent array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_SINGLE_OBJECT" value="The field configuration below describes the json attributes of the object to be set to the parent."/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_VALUES" value="The values from the schema (should only contain one column) will be added as simple values or as json objects to the parent array. Omit empty attributes means in this case, do not add null to the array." show="false"/>
+    <elementParameter field="LABEL" name="LABEL_ARRAY_OF_ARRAYS" value="The values from the schema columns will be added row by row as array to the parent array." show="false"/>
+    <elementParameter field="TABLE" name="COLUMN_CONFIG">
+      <elementValue elementRef="SCHEMA_COLUMN" value="serverName"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adminPassword"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="trackMedalsRequirement"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="safetyRatingRequirement"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="racecraftRatingRequirement"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="isRaceLocked"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="password"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="maxCarSlots"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="spectatorPassword"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="randomizeTrackWhenEmpty"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="shortFormationLap"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dumpLeaderboards"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="dumpEntryList"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="allowAutoDQ"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="formationLapType"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="configVersion"/>
+      <elementValue elementRef="ATTRIBUTE_ALIAS" value=""/>
+      <elementValue elementRef="USE" value="true"/>
+      <elementValue elementRef="IS_DOC" value="false"/>
+      <elementValue elementRef="OMIT_ATTRIBUTE_IF_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" value="REPOSITORY" show="false"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" value="_ADykIIE3EeqRNISNIgGZNw - metadata" show="false"/>
+    <elementParameter field="TEXT" name="KEYS_AS_SQL_IN_CLAUSE_REPLACEMENT" value="&quot;='0'&quot;"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="metadata" name="tJSONDocOutput_7">
+      <column comment="" key="false" length="-1" name="serverName" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="adminPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="trackMedalsRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="safetyRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="racecraftRatingRequirement" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="isRaceLocked" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="password" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="maxCarSlots" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="spectatorPassword" nullable="true" pattern="" precision="-1" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="randomizeTrackWhenEmpty" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="shortFormationLap" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpLeaderboards" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="dumpEntryList" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="allowAutoDQ" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="formationLapType" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="configVersion" nullable="true" pattern="" precision="-1" type="id_Integer" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJSONDocSave" componentVersion="16.2" offsetLabelX="0" offsetLabelY="0" posX="96" posY="1760">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_4" show="false"/>
+    <elementParameter field="COMPONENT_LIST" name="JSON_DOCUMENT" value="tJSONDocOutput_7"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_FILE" value="true"/>
+    <elementParameter field="FILE" name="OUTPUT_FILE_PATH" value="context.filepath + context.json_setting + &quot;.json&quot;"/>
+    <elementParameter field="COLUMN_LIST" name="JSON_OUTPUT_COLUMN" value="entry"/>
+    <elementParameter field="CHECK" name="OUTPUT_AS_NODE" value="false"/>
+    <elementParameter field="CHECK" name="PRETTY_PRINT" value="true"/>
+    <elementParameter field="CHECK" name="IGNORE_EMPTY" value="false"/>
+    <elementParameter field="CHECK" name="STD_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="REMOVE_ROOT_ARRAY" value="false"/>
+    <elementParameter field="TEXT" name="REMOVE_ROOT_ARRAY_CONDITION" value="true" show="false"/>
+    <elementParameter field="CHECK" name="DIE_IF_REMOVAL_NOT_POSSIBLE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="VALIDATE_OUTPUT" value="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_VALIDATE_ERRORS" value="true" show="false"/>
+    <elementParameter field="LABEL" name="RELEASE_LABEL_20191029" value="Release: 16.2 build at: 20191029"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJSONDocSave_4">
+      <column comment="" key="false" length="-1" name="entry" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="force" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJSONDocOpen_1" offsetLabelX="0" offsetLabelY="0" source="tJSONDocOpen_1" target="tFixedFlowInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk2" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tJSONDocOutput_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="entries"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="forceEntryList"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFixedFlowInput_1" offsetLabelX="0" offsetLabelY="0" source="tFixedFlowInput_1" target="tJSONDocSave_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk3" show="false"/>
+  </connection>
+  <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tJSONDocOutput_1" offsetLabelX="0" offsetLabelY="0" source="tJSONDocOutput_1" target="tFileInputExcel_1">
+    <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
+    <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tFileInputExcel_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_1" target="tMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row3" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_1" target="tJSONDocOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="out2" lineStyle="0" metaname="out2" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tJSONDocOutput_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="out2" show="false"/>
+  </connection>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tJSONDocSave_1" offsetLabelX="0" offsetLabelY="0" source="tJSONDocSave_1" target="tJSONDocOpen_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnComponentOk1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputExcel_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_2" target="tMap_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row2" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputExcel_2" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_2" target="tJSONDocSave_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="main" lineStyle="0" metaname="main" offsetLabelX="0" offsetLabelY="0" outputId="1" source="tMap_2" target="tJSONDocOutput_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="main" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="sessions" lineStyle="0" metaname="sessions" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_2" target="tJSONDocOutput_5">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="sessions" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJSONDocOpen_2" offsetLabelX="0" offsetLabelY="0" source="tJSONDocOpen_2" target="tFileInputExcel_2">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJSONDocSave_2" offsetLabelX="0" offsetLabelY="0" source="tJSONDocSave_2" target="tJSONDocOpen_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk4" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJSONDocOpen_3" offsetLabelX="0" offsetLabelY="0" source="tJSONDocOpen_3" target="tFileInputExcel_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk7" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tFileInputExcel_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_3" target="tDenormalize_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row4" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputExcel_3" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_3" target="tJSONDocSave_3">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk8" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tDenormalize_1" offsetLabelX="0" offsetLabelY="0" source="tDenormalize_1" target="tExtractDelimitedFields_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row5" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tExtractDelimitedFields_1" offsetLabelX="0" offsetLabelY="0" source="tExtractDelimitedFields_1" target="tMap_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="eventRules" lineStyle="0" metaname="eventRules" offsetLabelX="0" offsetLabelY="0" source="tMap_3" target="tJSONDocOutput_6">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="eventRules" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJSONDocSave_3" offsetLabelX="0" offsetLabelY="0" source="tJSONDocSave_3" target="tJSONDocOpen_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk11" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tJSONDocOpen_4" offsetLabelX="0" offsetLabelY="0" source="tJSONDocOpen_4" target="tFileInputExcel_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tFileInputExcel_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_4" target="tDenormalize_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row7" show="false"/>
+  </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputExcel_4" offsetLabelX="0" offsetLabelY="0" source="tFileInputExcel_4" target="tJSONDocSave_4">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk10" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tDenormalize_2" offsetLabelX="0" offsetLabelY="0" source="tDenormalize_2" target="tExtractDelimitedFields_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tExtractDelimitedFields_2" offsetLabelX="0" offsetLabelY="0" source="tExtractDelimitedFields_2" target="tMap_4">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="settings" lineStyle="0" metaname="settings" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tJSONDocOutput_7">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="settings" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFixedFlowInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_2" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_3" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocOpen_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tFileInputExcel_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJSONDocSave_4" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+</talendfile:ProcessType>

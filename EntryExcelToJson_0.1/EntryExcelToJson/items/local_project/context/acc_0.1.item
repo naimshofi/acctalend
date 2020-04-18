@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_eQAMoYFOEeqRNISNIgGZNw" name="Default">
+  <contextParameter xmi:id="_eQ0sAIFOEeqRNISNIgGZNw" comment="" name="filepath" prompt="filepath?" promptNeeded="false" type="id_String" value="&quot;C:\accfile\&quot;"/>
+  <contextParameter xmi:id="_eQ0sAYFOEeqRNISNIgGZNw" comment="" name="filename" prompt="filename?" promptNeeded="false" type="id_String" value="&quot;acc_server_config.xlsx&quot;"/>
+  <contextParameter xmi:id="_eQ0sAoFOEeqRNISNIgGZNw" comment="" name="json_entry" prompt="json_entry?" promptNeeded="false" type="id_String" value="&quot;entrylist&quot;"/>
+  <contextParameter xmi:id="_eQ0sA4FOEeqRNISNIgGZNw" comment="" name="json_event" prompt="json_event?" promptNeeded="false" type="id_String" value="&quot;event&quot;"/>
+  <contextParameter xmi:id="_eQ0sBIFOEeqRNISNIgGZNw" comment="" name="json_eventRules" prompt="json_eventRules?" promptNeeded="false" type="id_String" value="&quot;eventRules&quot;"/>
+  <contextParameter xmi:id="_eQ0sBYFOEeqRNISNIgGZNw" comment="" name="json_setting" prompt="json_setting?" promptNeeded="false" type="id_String" value="&quot;settings&quot;"/>
+</talendfile:ContextType>
